@@ -12,7 +12,7 @@ const typography = {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 14px;
-    line-height: 23;
+    line-height: 23px;
     letter-spacing: 0px;
   `,
   button: css`

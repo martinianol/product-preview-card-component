@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import "./App.css";
+import Card from "./components/Card";
 
 function App() {
   return (
     <Main>
-      Perfume Gabrielle Essence Eau De Parfum A floral, solar and voluptuous
-      interpretation composed by Olivier Polge, Perfumer-Creator for the House
-      of CHANEL. $149.99 $169.99 Add to Cart
+      <Card />
     </Main>
   );
 }
@@ -14,6 +13,10 @@ function App() {
 export default App;
 
 const Main = styled.main`
-  ${({ theme }) => theme.typography.display}
-  color: ${({ theme }) => theme.colors.gunmetal}
+  background-color: ${({ theme }) => theme.colors.cream};
+  padding: 28px 16px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

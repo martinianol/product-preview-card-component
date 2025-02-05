@@ -6,10 +6,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Optional: Ensure full viewport height */
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
