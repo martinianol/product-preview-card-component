@@ -6,14 +6,7 @@ import ProductInfo from "./ProductInfo";
 const Card = () => {
   return (
     <Article>
-      <ImgContainer>
-        {/* <Img
-          src={perfumeImageMob}
-          alt="Perfume"
-          srcSet={`${perfumeImageMob} 600w, ${perfumeImageDesk} 1200w`}
-          sizes="(max-width: 600px) 100vw, 50vw"
-        /> */}
-      </ImgContainer>
+      <ImgContainer />
       <ProductInfo />
     </Article>
   );
@@ -28,6 +21,7 @@ const Article = styled.article`
   border-radius: 10px;
   overflow: hidden;
   max-width: 400px;
+  width: 100%;
 
   @media (min-width: 600px) {
     flex-direction: row;
@@ -39,19 +33,14 @@ const Article = styled.article`
 const ImgContainer = styled.div`
   width: 100%;
   height: 240px;
-  background-image: ${({ theme }) => `url(${perfumeImageMob})`};
+  background-image: ${`url(${perfumeImageMob})`};
   background-size: cover;
   background-position: center;
 
   @media (min-width: 600px) {
-    background-image: ${({ theme }) => `url(${perfumeImageDesk})`};
+    width: 50%;
+    background-image: ${`url(${perfumeImageDesk})`};
     height: 100%;
     max-height: unset;
   }
 `;
-
-// const Img = styled.img`
-//   width: 100%;
-//   height: 100%;
-//   object-fit: fill;
-// `;

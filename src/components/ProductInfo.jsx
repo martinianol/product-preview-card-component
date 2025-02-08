@@ -35,6 +35,7 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   @media (min-width: 600px) {
+    width: 50%;
     padding: 32px;
   }
 `;
