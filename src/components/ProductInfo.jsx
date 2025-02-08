@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import CartIcon from "../assets/icon-cart.svg"; // Import SVG
 
 const ProductInfo = () => {
   return (
@@ -20,7 +21,10 @@ const ProductInfo = () => {
             <OldPrice>$169.99</OldPrice>
           </PriceInfo>
         </Flex>
-        <Button>Add to Cart</Button>
+        <Button>
+          <img src={CartIcon} alt="Cart Icon" />
+          <span>Add to Cart</span>
+        </Button>
       </Flex>
     </Container>
   );
@@ -86,16 +90,21 @@ const OldPrice = styled.p`
 `;
 
 const Button = styled.button`
-  font-family: "Montserrat", sans-serif;
+  ${({ theme }) => theme.typography.button}
   color: ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors.deepAquamarine};
   width: 100%;
   border-radius: 8px;
   padding: 15px;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.deepAquamarineHover};
-    cursor: pointer;
   }
 `;
